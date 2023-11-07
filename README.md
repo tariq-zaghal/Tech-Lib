@@ -64,4 +64,16 @@ As you can see, there four folders other than CreateTables; `Queries`, `Function
 | [fn_CalculateOverdueFees](https://github.com/tariq-zaghal/Tech-Lib/blob/dev/Functions/fn_CalculateOverdueFees.sql)  | Calculates the overdue fees for a given loan using its `LoanID` |
 | [fn_BookBorrowingFrequency](https://github.com/tariq-zaghal/Tech-Lib/blob/dev/Functions/fn_BookBorrowingFrequency.sql)  | Counts the number of times the book has been issued given a book's `BookID` |
 
+### 3- Stored Procedures
 
+| Name  | Job |
+| ------------- | ------------- |
+| [sp_AddNewBorrower](https://github.com/tariq-zaghal/Tech-Lib/blob/dev/StoredProcedures/sp_AddNewBorrower.sql)  | Handles the task of inserting new borrower to the `Borrower` table |
+| [sp_BorrowedBooksReport](https://github.com/tariq-zaghal/Tech-Lib/blob/dev/StoredProcedures/sp_BorrowedBooksReport.sql)  | Lists all the books borrowed within a given time frame  |
+| [sp_GetOverdueBorrowers](https://github.com/tariq-zaghal/Tech-Lib/blob/dev/StoredProcedures/sp_GetOverdueBorrowers.sql) | Lists current overdue borrowers with borrowed books' details |
+
+### 4- Triggers
+
+| Name  | Job |
+| ------------- | ------------- |
+| [BookStatusLogTrigger](https://github.com/tariq-zaghal/Tech-Lib/blob/dev/Triggers/BookStatusLogTrigger.sql)  | Chekcs if updated book's `CurrentStatus` have changed, if so it inserts into `AuditLog` a row that contains the book's ID, date change made, and the changed status|
