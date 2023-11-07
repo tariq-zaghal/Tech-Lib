@@ -5,6 +5,7 @@ I have completed this project during an internship with FootHill Technologies.
 ## Introduction
 Tech-Lib data base contains three simple entities; Book, Borrower, and Loan.
 The names are pretty much self explanatory: 
+
 1- Book contains the data related to each book in our library.
 
 2- Borrower contains the data related to our active subscribers in the library.
@@ -47,11 +48,20 @@ As you can see, there four folders other than CreateTables; `Queries`, `Function
 
 | Name    | Job |
 | ------------- | ------------- |
-| [ListBorrowedBooksBySpecificBorrower](https://github.com/tariq-zaghal/Tech-Lib/blob/dev/Queries/ListBorrowedBooksBySpecificBorrower.sql)  | Lists the history of all books borrowed by a given Borrower using his Borrower ID |
+| [ListBorrowedBooksBySpecificBorrower](https://github.com/tariq-zaghal/Tech-Lib/blob/dev/Queries/ListBorrowedBooksBySpecificBorrower.sql)  | Lists the history of all books borrowed by a given Borrower using his `BorrowerID` |
 | [GetBorrowersWithTwoOrMoreBooksActivelyBorrowed](https://github.com/tariq-zaghal/Tech-Lib/blob/dev/Queries/GetBorrowersWithTwoOrMoreBooksActivelyBorrowed.sql)  | Lists active borrowers who are currently borrowing two or more books with the borrowed books' details |
 | [RankBorrrowersBasedOnBorrowingFrequency](https://github.com/tariq-zaghal/Tech-Lib/blob/dev/Queries/RankBorrrowersBasedOnBorrowingFrequency.sql) | Ranks Borrowers based on the number of books they have borrowed |
 | [GetMostPopularGenreBasedOnAGivenMonth](https://github.com/tariq-zaghal/Tech-Lib/blob/dev/Queries/GetMostPopularGenreBasedOnAGivenMonth.sql) | Returns the most popular genre in a given month |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
+| [GetBooksOverdueByMoreThan30DaysWithBorrowerInfo](https://github.com/tariq-zaghal/Tech-Lib/blob/dev/Queries/GetBooksOverdueByMoreThan30DaysWithBorrowerInfo.sql) | Lists all books overdue by more than 30 days with their associated borrowers |
+| [RankAuthorPopularityBasedOnBooksBorrowed](https://github.com/tariq-zaghal/Tech-Lib/blob/dev/Queries/RankAuthorPopularityBasedOnBooksBorrowed.sql) | Ranks authors based on their books' borrowing frequency |
+| [GetGenrePreferenceByAgeGroup](https://github.com/tariq-zaghal/Tech-Lib/blob/dev/Queries/GetGenrePreferenceByAgeGroup.sql) | Lists each age group with their preferred genre |
+| [RankWeekdaysByPercentageOfLoansMade](https://github.com/tariq-zaghal/Tech-Lib/blob/dev/Queries/RankWeekdaysByPercentageOfLoansMade.sql) | Ranks Weekdays by the percentage of total loans made in that day |
+
+### 2- Functions
+
+| Name  | Job |
+| ------------- | ------------- |
+| [fn_CalculateOverdueFees](https://github.com/tariq-zaghal/Tech-Lib/blob/dev/Functions/fn_CalculateOverdueFees.sql)  | Calculates the overdue fees for a given loan using its `LoanID` |
+| [fn_BookBorrowingFrequency](https://github.com/tariq-zaghal/Tech-Lib/blob/dev/Functions/fn_BookBorrowingFrequency.sql)  | Counts the number of times the book has been issued given a book's `BookID` |
+
+
